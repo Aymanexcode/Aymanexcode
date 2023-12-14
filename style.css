@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=B612:wght@700&family=Oswald:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #033b4a;
+    --secondary-color: #20c997;
+    --gray: #4a4a4d;
+    --bg-primary: #ecf0f3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Oswald', sans-serif;
+}
+
+h1,
+h2 {
+    font-family: 'B612', sans-serif;
+}
+
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* multipl classes*/
+.text-primary {
+    color: rgb(0, 182, 182);
+    text-shadow: 0 0 3px #000000, 0 0 5px #0000FF;
+}
+
+.btn-primary {
+    background-color: #033b4a;
+    border-radius: 5px;
+    padding: 8px 20px;
+    font-size: 15px;
+    color: white;
+    text-shadow: 3px 3px 3px rgb(0, 182, 182);
+    transition: all 0.4s ease;
+}
+
+.btn-primary:hover {
+    background-color: #021e25;
+}
+
+.container {
+    max-width: 1150px;
+    margin: auto;
+    padding: 0 2rem;
+}
+/* Header Start */
+header {
+    background-color: var(--bg-primary);
+    height: 100vh;
+}
+
+
+header .navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #b9b9c2;
+    position: fixed;
+    width: 100%;
+}
+
+header .navbar nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1150px;
+    margin: auto;
+    padding: 1.5rem 2rem;
+}
+
+#home #logo {
+    color: var(--primary-color);
+    font-size: 25px;
+    font-weight: 600;
+}
+
+header .navbar nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .navbar nav ul a {
+    margin: 0 15px;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+header .header-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    max-width: 1150px;
+    margin: auto;
+    padding: 5rem 2rem 0;
+    height: 100%;
+    align-items: center;
+}
+
+header .header-content .content-text {
+    margin-bottom: 5rem;
+}
+
+.Img14 {
+    height: 450px;
+}
+
+#home .header-content p span {
+    font-weight: 750;
+    font-size: 21px;
+}
+
+#home .header-content h1 {
+    font-size: 65px;
+    color: var(--primary-color);
+    text-shadow: 3px 3px 3px rgb(0, 182, 182);
+    margin-top: 10px;
+}
+
+#home .header-content .title {
+    font-size: 21px;
+    color: var(--primary-color);
+    margin: 9.5px 0;
+    font-weight: 500;
+}
+
+#home .header-content .socials {
+    margin: 1rem 0 2rem;
+}
+
+#home .header-content .socials a i {
+    font-size: 20px;
+    padding: 11px;
+    background-color: #45ffef;
+    border-radius: 10%;
+    margin-right: 15px;
+    transition: all 0.4s ease;
+}
+
+#home .header-content .socials a i:hover {
+    transform: scale(0.85);
+}
+
+/*Header End */
+
+/*about start*/
+
+#about , #skills {
+    padding: 6rem 0;
+}
+
+#about h2 , #skills h2 {
+    text-align: center;
+    font-size: 39px;
+    color: var(--primary-color);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+#about hr {
+    width: 100px;
+    height: 3px;
+    background-color: var(--secondary-color);
+    border: none;
+    margin: 5px auto 0;
+}
+
+#about .about-content {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 3rem;
+}
+
+#about .about-content .col1 h3 {
+    font-size: 28px;
+    color: var(--primary-color);
+    margin-bottom: 22px;
+}
+
+#about .about-content .col1 p {
+    color: rgb(88, 88, 88);
+    margin-bottom: 22px;
+    line-height: 1.8;
+}
+
+#about .about-content .col2 p {
+    color: rgb(88, 88, 88);
+    margin-bottom: 22px;
+    border-bottom: 1px solid rgb(226, 203, 203);
+    padding-bottom: 5px;
+}
+
+
+/*about end*/
+
+
+
+
+
+
+/* skills start */
+
+#skills h2 {
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    
+}
+
+#skills {
+    background-color: var(--primary-color);
+}
+
+#skills .row img {
+    max-width: 300px;
+}
+
+
+#skills .skills-content {
+    margin-top: 2rem;
+}
+
+#skills .skills-content .row {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    text-align: center;
+}
+
+#skills .skills-content .row .item {
+    color: black;
+    background-color: white;
+    margin: 150px;
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 75px;
+    transition: all 0.4s ease;
+}
+
+
+#skills .skills-content .row .item:hover {
+    box-shadow: 10px 10px 10px #20c997;
+}
+
+
+
+
+/* skills end */
+
+
+/* footer */
+
+#footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* tablet responsive */
+@media (max-width: 768px) {
+    header .navbar nav {
+        display: block;
+        text-align: center;
+    }
+
+    header .navbar nav ul {
+        margin-top: 20px;
+    }
+
+    header .navbar nav ul a {
+        margin: 0 8px;
+    }
+
+    header .header-content {
+        grid-template-columns: 1fr;
+    }
+
+    header .header-content .content-text {
+        margin-bottom: 0rem;
+        margin-top: 5rem;
+    }
+
+    .Img14 {
+        max-width: 350px;
+        max-height: 350px;
+        margin: auto;
+    }
+
+    #home .header-content h1 {
+        font-size: 50px;
+    }
+
+    #about .about-content {
+        grid-template-columns: 1fr;
+        row-gap: 3rem;
+    }
+
+    #skills .skills-content .row {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    #portfolio .row {
+        display: grid;
+        gap: 2rem;
+        margin-top: 4rem;
+    }
+}
+
+/* mobile */
+
+@media (max-width: 528px) {
+    #home .header-content h1 {
+        font-size: 35px;
+    }
+
+    #home .header-content p span {
+        font-size: 16px;
+    }
+
+    #home .header-content p span,
+    #home .header-content .title {
+        font-size: 16px;
+    }
+
+    .Img14 {
+        margin-top: 2rem; }
+
+        #about h2,
+        #skills h2,
+        #portfolio h2 {
+            font-size: 30px;
+        }
+
+        #about .about-content .col1 h3 {
+            font-size: 20px;
+        }
+
+        #skills .skills-content .row {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        #skills .skills-content .row .item {
+            color: black;
+            background-color: white;
+            margin: 5px;
+            padding: 1rem;
+            border-radius: 10px;
+            font-size: 10px;
+            transition: all 0.4s ease;
+            align-items: center;
+        }
+}
+    
