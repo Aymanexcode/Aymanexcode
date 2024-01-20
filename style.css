@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=B612:wght@700&family=Oswald:wght@300;400;500;600;700&display=swap');
 
 :root {
-    --primary-color: #033b4a;
-    --secondary-color: #20c997;
+    --primary-color: #0F1035;
+    --secondary-color: #7FC7D9;
     --gray: #4a4a4d;
-    --bg-primary: #ecf0f3;
+    --bg-primary: #DCF2F1;
 }
 
 * {
@@ -37,17 +37,17 @@ a {
 }
 
 .btn-primary {
-    background-color: #033b4a;
-    border-radius: 5px;
+    background-color: #FE7A36;
+    border-radius: 20px;
     padding: 8px 20px;
-    font-size: 15px;
+    font-size: 18px;
     color: white;
-    text-shadow: 3px 3px 3px rgb(0, 182, 182);
     transition: all 0.4s ease;
 }
 
 .btn-primary:hover {
-    background-color: #021e25;
+    background-color: #fe7936d2;
+    padding: 10px 30px;
 }
 
 .container {
@@ -57,17 +57,18 @@ a {
 }
 /* Header Start */
 header {
-    background-color: var(--bg-primary);
+    background-color: #0F1035;
     height: 100vh;
 }
 
 
 header .navbar {
-    background-color: #ffffff;
+    background-color: #DCF2F1;
     border-bottom: 1px solid #b9b9c2;
     position: fixed;
     width: 100%;
     box-shadow: 0px 4px 8px rgb(18, 136, 165);
+    z-index: 999;
 }
 
 header .navbar nav {
@@ -82,7 +83,13 @@ header .navbar nav {
 #home #logo {
     color: var(--primary-color);
     font-size: 25px;
-    font-weight: 600;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+#home #logo:hover{
+    color: #365486;
+    font-size: 30px;
 }
 
 header .navbar nav ul {
@@ -95,6 +102,13 @@ header .navbar nav ul a {
     margin: 0 15px;
     color: var(--primary-color);
     font-weight: 600;
+    transition: 0.3s;
+    font-size: 18px;
+}
+
+header .navbar nav ul a:hover {
+    color: #365486;
+    font-size: 22px;
 }
 
 header .header-content {
@@ -122,14 +136,14 @@ header .header-content .content-text {
 
 #home .header-content h1 {
     font-size: 65px;
-    color: var(--primary-color);
-    text-shadow: 3px 3px 3px rgb(0, 182, 182);
+    color: #DCF2F1;
+    text-shadow: 3px 3px 3px rgb(0, 0, 0);
     margin-top: 10px;
 }
 
 #home .header-content .title {
     font-size: 21px;
-    color: var(--primary-color);
+    color: #b9b9c2;
     margin: 9.5px 0;
     font-weight: 500;
 }
@@ -142,27 +156,31 @@ header .header-content .content-text {
     font-size: 20px;
     padding: 11px;
     background-color: #45ffef;
-    border-radius: 10%;
+    border-radius: 100%;
     margin-right: 15px;
     transition: all 0.4s ease;
 }
 
 #home .header-content .socials a i:hover {
     transform: scale(0.85);
+    background-color: #20c997;
 }
 
 /*Header End */
 
 /*about start*/
 
+#about {
+    background-color: #ff9843d5;
+}
 #about , #skills {
     padding: 6rem 0;
 }
 
-#about h2 , #skills h2 {
+#about h2 , #skills h2 , #projects h2 {
     text-align: center;
     font-size: 39px;
-    color: var(--primary-color);
+    color: #DCF2F1;
     font-weight: 600;
     letter-spacing: 1px;
 }
@@ -183,19 +201,23 @@ header .header-content .content-text {
 }
 
 #about .about-content .col1 h3 {
-    font-size: 28px;
+    font-size: 35px;
     color: var(--primary-color);
-    margin-bottom: 22px;
+    margin-bottom: 50px;
 }
 
 #about .about-content .col1 p {
-    color: rgb(88, 88, 88);
+    color: #0F1035;
     margin-bottom: 22px;
     line-height: 1.8;
+    font-weight: 600;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+    font-size: 17px;
 }
 
 #about .about-content .col2 p {
-    color: rgb(88, 88, 88);
+    color: #0F1035;
     margin-bottom: 22px;
     border-bottom: 1px solid rgb(226, 203, 203);
     padding-bottom: 5px;
@@ -211,48 +233,103 @@ header .header-content .content-text {
 
 /* skills start */
 
-#skills h2 {
-    color: white;
-    font-family: 'Oswald', sans-serif;
-    
+.cards {
+    background-color: #37B5B6;
 }
 
-#skills {
-    background-color: var(--primary-color);
+.title {
+    display: flex;
+    color: #3a6cf4;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
 }
 
-#skills .row img {
-    max-width: 300px;
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-
-#skills .skills-content {
-    margin-top: 2rem;
+.card {
+    background-color: #fff;
+    width: 21.25em;
+    box-shadow: 5px 5px 25px #0F1035;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    transition: 0.7s ease;
 }
 
-#skills .skills-content .row {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    align-items: center;
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card .icon {
+    color: #3a6cf4;
+    font-size: 8em;
     text-align: center;
 }
 
-#skills .skills-content .row .item {
-    color: black;
-    background-color: white;
-    margin: 150px;
-    padding: 1rem;
+.info {
+    text-align: center;
+}
+
+.info h3{
+    color: #3a6cf4;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+}
+
+.projects {
+    background-color: #000016;
+}
+
+.projects .content{
+    margin-top: 30px;
+}
+
+.project-card {
+    background-color: #fff;
+    border: 1px solid #fff;
+    min-height: 14em;
+    width: 23em;
+    overflow: hidden;
     border-radius: 10px;
-    font-size: 75px;
-    transition: all 0.4s ease;
+    margin: 20px;
+    transition: 0.7s ease;
 }
 
-
-#skills .skills-content .row .item:hover {
-    box-shadow: 10px 10px 10px #20c997;
+.project-card:hover {
+   transform: scale(1.1);
 }
 
+.project-card:hover .project-image {
+    opacity: 0.9;
+ }
 
+.project-image img{
+    width: 100%
+}
+
+.project-info {
+    padding: 1em;
+}
+
+.project-category {
+    font-size: 0.8em;
+    color: #000;
+}
+
+.project-title {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 10px;
+}
 
 
 /* skills end */
@@ -272,6 +349,7 @@ header .header-content .content-text {
 html {
     scroll-behavior: smooth;
 }
+
 
 /* tablet responsive */
 @media (max-width: 768px) {
@@ -341,7 +419,8 @@ html {
     }
 
     .Img14 {
-        margin-top: 2rem; }
+        margin-top: 2rem; 
+    }
 
         #about h2,
         #skills h2,
