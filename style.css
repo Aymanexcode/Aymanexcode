@@ -127,6 +127,11 @@ header .header-content .content-text {
 
 .Img14 {
     height: 450px;
+    transition: 0.3s;
+}
+
+.Img14:hover {
+   transform: scale(1.1);
 }
 
 #home .header-content p span {
